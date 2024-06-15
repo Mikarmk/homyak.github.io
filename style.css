@@ -1,0 +1,41 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#clickableImage {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+#clickableImage:active {
+    transform: scale(0.9);
+}
+
+#clickCounter {
+    font-size: 32px;
+    position: absolute;
+    top: 20%;
+}
+
+.floating {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: float 2s ease-out forwards;
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
